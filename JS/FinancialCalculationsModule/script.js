@@ -8,4 +8,3 @@ console.log("After maasser: " + income * 0.9);
 console.log("After Hommash: " + income * 0.8);
 
 console.log();
-console.log("Hello class 48 - the best that lecturer can get.....");
