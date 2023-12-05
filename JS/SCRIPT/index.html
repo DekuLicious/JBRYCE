@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <script src="script.js"></script>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Todo List</h2>
+    <div>
+      <label for="task-name">Task Name:</label>
+      <input type="text" id="task-name" required />
+      <label for="due-date">Due Date:</label>
+      <input type="date" id="due-date" required />
+      <button onclick="addTask()">Add Task</button>
+    </div>
+    <ul id="task-list" class="task-list"></ul>
+  </body>
+</html>
