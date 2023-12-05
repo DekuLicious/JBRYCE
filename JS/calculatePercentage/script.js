@@ -1,8 +1,12 @@
-function calculatePercentage() {
-  var income = document.getElementById("income").value;
-  var maaser = income * 0.1;
-  var hommash = income * 0.2;
+const maaserPercentage = 0.1;
+const hommashPercentage = 0.2;
 
-  var result = document.getElementById("result");
-  result.innerText = "Maaser: " + maaser + "\nHommash: " + hommash;
-}
+const calculatePercentage = () => {
+  const income = document.getElementById("income").value;
+
+  const maaser = income * maaserPercentage;
+  const hommash = income * hommashPercentage;
+
+  const result = document.getElementById("result");
+  result.innerText = `Maaser: ${maaser}\nHommash: ${hommash}`;
+};
