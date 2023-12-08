@@ -1,17 +1,17 @@
 function createStudent(name, classNumber, grades) {
   return {
-    name: name,
-    classNumber: classNumber,
-    grades: grades,
+    studentName: name,
+    studentClassNumber: classNumber,
+    studentGrades: grades,
     calculateAverageGrade: function () {
       let sum = 0;
-      for (let index = 0; index < this.grades.length; index++) {
-        sum += this.grades[index];
+      for (let index = 0; index < this.studentGrades.length; index++) {
+        sum += this.studentGrades[index];
       }
-      return sum / this.grades.length;
+      return sum / this.studentGrades.length;
     },
     getLowestGrade: function () {
-      return Math.min(...this.grades);
+      return Math.min(...this.studentGrades);
     },
   };
 }
@@ -31,8 +31,8 @@ students.forEach((student) => {
   const avgGradeCell = row.insertCell(2);
   const lowestGradeCell = row.insertCell(3);
 
-  nameCell.innerHTML = student.name;
-  classCell.innerHTML = student.classNumber;
+  nameCell.innerHTML = student.studentName;
+  classCell.innerHTML = student.studentClassNumber;
   avgGradeCell.innerHTML = student.calculateAverageGrade().toFixed(2);
   lowestGradeCell.innerHTML = student.getLowestGrade();
 });
