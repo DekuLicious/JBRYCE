@@ -1,34 +1,34 @@
-var tasks = JSON.parse(localStorage.getItem("myTasks"));
-if (tasks == null) {
-  var tasks = [];
-}
+var tasks = JSON.parse(localStorage.getItem("myTasks")) || [];
 
-createTable();
+createTaskTable();
 
-function createTable() {
-  var result = `<table border="1" cellSpacing="0" style="margin-left:auto;margin-right:auto">`;
-  for (var index = 0; index < tasks.length; index++) {
+function createTaskTable() {
+  var result = `<table border="1" cellSpacing="0">`;
+
+  tasks.forEach(function (task, index) {
+    var textDecoration = task.isDone ? 'style="text-decoration: line-through;"' : "";
     result += `
       <tr>
-        <td ${tasks[index].taskDone ? 'style="text-decoration: line-through;"' : ""}>${tasks[index].taskName}</td>
-        <td ${tasks[index].taskDone ? 'style="text-decoration: line-through;"' : ""}>${tasks[index].taskDate}</td>
-        <td><input type="checkbox" ${tasks[index].taskDone ? "checked" : ""} onchange="toggleTaskDone(${index})"/></td>
+        <td ${textDecoration}>${task.name}</td>
+        <td ${textDecoration}>${task.date}</td>
+        <td><input type="checkbox" ${task.isDone ? "checked" : ""} onchange="toggleTaskDone(${index})"/></td>
       </tr>
     `;
-  }
+  });
+
   result += "</table>";
   document.getElementById("taskList").innerHTML = result;
 }
 
-function Tasks(taskName, taskDate, taskDone) {
-  this.taskName = taskName;
-  this.taskDate = taskDate;
-  this.taskDone = taskDone;
-
-  this.taskIsDone = function () {
-    this.taskDone = true;
-  };
+function Task(name, date, isDone) {
+  this.name = name;
+  this.date = date;
+  this.isDone = isDone;
 }
+
+Task.prototype.markAsDone = function () {
+  this.isDone = true;
+};
 
 const saveTasks = () => {
   localStorage.setItem("myTasks", JSON.stringify(tasks));
@@ -37,19 +37,19 @@ const saveTasks = () => {
 const addTask = () => {
   var taskName = document.getElementById("taskName").value;
   var taskDate = document.getElementById("taskDate").value;
-  tasks.push(new Tasks(taskName, taskDate, false));
-  createTable();
+  tasks.push(new Task(taskName, taskDate, false));
+  createTaskTable();
   saveTasks();
 };
 
 const clearTasks = () => {
   localStorage.removeItem("myTasks");
   tasks = [];
-  createTable();
+  createTaskTable();
 };
 
 const toggleTaskDone = (index) => {
-  tasks[index].taskDone = !tasks[index].taskDone;
-  createTable();
+  tasks[index].isDone = !tasks[index].isDone;
+  createTaskTable();
   saveTasks();
 };
