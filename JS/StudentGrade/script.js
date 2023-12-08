@@ -11,7 +11,13 @@ function createStudent(name, classNumber, grades) {
       return sum / this.studentGrades.length;
     },
     getLowestGrade: function () {
-      return Math.min(...this.studentGrades);
+      let lowestGrade = this.studentGrades[0];
+      for (let index = 1; index < this.studentGrades.length; index++) {
+        if (this.studentGrades[index] < lowestGrade) {
+          lowestGrade = this.studentGrades[index];
+        }
+      }
+      return lowestGrade;
     },
   };
 }
