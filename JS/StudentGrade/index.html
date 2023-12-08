@@ -6,44 +6,44 @@
     <title>Document</title>
     <script defer src="script.js"></script>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: #ececec;
+      .container {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
       }
       table {
-        margin: 20px auto;
+        width: 800px;
         border-collapse: collapse;
-        width: 80%;
-        max-width: 800px;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: 0 auto;
       }
       th,
       td {
-        padding: 12px 15px;
-        text-align: center;
-        border-bottom: 1px solid #ddd;
+        padding: 0.5rem;
+        border: 1px solid black;
       }
       th {
-        background-color: #4caf50;
-        color: white;
-      }
-      tr:hover {
-        background-color: #ddd;
+        background-color: lightgray;
       }
     </style>
   </head>
   <body>
-    <table id="studentsTable">
-      <tr>
-        <th>Name</th>
-        <th>Class Number</th>
-        <th>Average Grade</th>
-        <th>Lowest Grade</th>
-      </tr>
-    </table>
+    <div class="container">
+      <div class="table-responsive">
+        <table id="studentsTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Class Number</th>
+              <th>Average Grade</th>
+              <th>Lowest Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Rows will be added dynamically using JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
   </body>
 </html>
