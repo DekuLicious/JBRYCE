@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const carNumberInput = document.createElement("input");
   carNumberInput.type = "text";
   carNumberInput.name = "carNumber";
-  carNumberInput.placeholder = "Car Number";
+  carNumberInput.placeholder = "Enter Car Number";
   carNumberInput.style.marginBottom = "10px";
   carNumberInput.style.padding = "10px";
   carNumberInput.style.width = "100%";
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Create a new button element for adding car numbers
   const addButton = document.createElement("button");
   addButton.type = "button";
-  addButton.innerText = "Add";
+  addButton.innerText = "Add Car Number";
   addButton.style.marginBottom = "20px";
   addButton.style.padding = "10px 20px";
   addButton.style.backgroundColor = "#4caf50";
