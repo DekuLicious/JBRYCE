@@ -107,10 +107,10 @@ function createTable() {
 
   if (allCars.length == 0) {
     // If there are no cars, hide the table
-    tableHTML = "<p>No cars to display</p>";
+    tableHTML = "<p style='text-align: center;'>No cars to display</p>";
   } else {
     tableHTML += `
-      <table border="1" cellspacing="0">
+    <table>
           <tr>
               <th>Car Number</th>
               <th>Manufacturer</th>
