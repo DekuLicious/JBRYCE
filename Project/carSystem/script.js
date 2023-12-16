@@ -110,6 +110,7 @@ function createTable() {
     tableHTML = "<p style='text-align: center;'>No cars to display</p>";
   } else {
     tableHTML += `
+    <h1>Vehicles</h1>
     <table>
           <tr>
               <th>Car Number</th>
@@ -135,7 +136,11 @@ function createTable() {
                 <td>${carObject.gasoline}</td>
                 <td>${formatDate(carObject.nextTest)}</td>
                 <td>${carObject.km}</td>
-                <td><img src="${carObject.imageUrl}" alt="Car Image" style="width:100px; height:auto;"></td>
+                <td>${
+                  carObject.imageUrl
+                    ? `<img src="${carObject.imageUrl}" alt="Car Image" style="width:100px; height:auto;">`
+                    : "No Image Provided"
+                }</td>
             </tr>
         `;
     });
