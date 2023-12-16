@@ -2,7 +2,7 @@
 const carContainer = document.getElementById("carContainer");
 const carEndPoint =
   "https://data.gov.il/api/3/action/datastore_search?resource_id=053cea08-09bc-40ec-8f7a-156f0677aff3&q=";
-let allCars = [];
+var allCars = [];
 
 // HTML template for the page
 const siteTemplate = `
@@ -66,21 +66,21 @@ function updateFields(carInfo) {
 
 // Event handler for when car number field loses focus
 async function handleCarNumberFocusOut() {
-  const carNumber = document.getElementById("carNumber").value;
-  const carInfo = await getCarAPI(carNumber);
-  updateFields(carInfo);
+  const inputCarNumber = document.getElementById("carNumber").value;
+  const fetchedCarInfo = await getCarAPI(inputCarNumber);
+  updateFields(fetchedCarInfo);
 }
 
 // Function to add a new car to the list
-function addCar(event) {
-  event.preventDefault();
-  const carNumber = document.getElementById("carNumber").value;
-  if (validateCar(carNumber)) {
+function addCar(formSubmitEvent) {
+  formSubmitEvent.preventDefault();
+  const newCarNumber = document.getElementById("carNumber").value;
+  if (validateCar(newCarNumber)) {
     alert("Car already exists");
     return;
   }
-  const carInfo = {
-    carNumber: carNumber,
+  const newCarInfo = {
+    carNumber: newCarNumber,
     manufacturer: document.getElementById("manufacturer").value,
     model: document.getElementById("model").value,
     color: document.getElementById("color").value,
@@ -90,20 +90,20 @@ function addCar(event) {
     km: document.getElementById("km").value,
     imageUrl: document.getElementById("imageUrl").value,
   };
-  allCars.push(carInfo);
+  allCars.push(newCarInfo);
   createTable();
   saveCarsToStorage(); // Save the updated data to localStorage
   document.getElementById("carForm").reset();
 }
 
 // Function to check if a car with the same carNumber already exists
-function validateCar(carNumber) {
-  return allCars.some((car) => car.carNumber === carNumber);
+function validateCar(checkCarNumber) {
+  return allCars.some((currentCar) => currentCar.carNumber == checkCarNumber);
 }
 
 // Function to create and update the car table
 function createTable() {
-  let tableHTML = "";
+  var tableHTML = "";
 
   if (allCars.length == 0) {
     // If there are no cars, hide the table
