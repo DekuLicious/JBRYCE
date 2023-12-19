@@ -40,3 +40,42 @@ dog.startFetching();
 
 const fox = new Duck();
 fox.startFetching();
+
+// class Dog {
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   speak() {
+//     console.log(`${this.name} barks.`);
+//   }
+
+//   walk() {
+//     console.log(`${this.name} walks.`);
+//   }
+// }
+
+// class Labrador extends Dog {
+//   constructor(name) {
+//     super(name);
+//   }
+
+//   speak() {
+//     console.log(`${this.name} barks loudly.`);
+//   }
+// }
+
+// let jasper = new Dog("Jasper");
+// jasper.speak();
+// jasper.walk();
+
+// let sohko = new Labrador("Sohko");
+// sohko.speak();
+
+// class MathUtilities {
+//   static calculateVAT(price) {
+//     return price * 1.2;
+//   }
+// }
+
+// console.log(MathUtilities.calculateVAT(100.0).toFixed(2));
