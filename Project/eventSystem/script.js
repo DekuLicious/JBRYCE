@@ -80,37 +80,41 @@ const createTable = () => {
   }
 
   var tableHTML = `
-            <h1>Events</h1>
-            <table>
-                <tr>
-                    <th>Event Name</th>
-                    <th>Minimum Price</th>
-                    <th>Maximum Price</th>
-                    <th>Type</th>
-                    <th>Image</th>
-                    <th>Date</th>
-                    <th>Action</th>
-                </tr>
-        `;
+            <h1 class="h3 mb-3 fw-normal text-center">Events</h1>
+            <div class="table-responsive">
+                <table class="table table-striped text-center">
+                    <thead>
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Minimum Price</th>
+                            <th>Maximum Price</th>
+                            <th>Type</th>
+                            <th>Image</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
 
   allEvents.forEach((eventObject, index) => {
     // Reverse the date
     var reversedDate = eventObject.date.split("-").reverse().join("-");
 
     tableHTML += `
-                <tr>
-                    <td>${eventObject.name}</td>
-                    <td>${eventObject.minPrice}</td>
-                    <td>${eventObject.maxPrice}</td>
-                    <td>${eventObject.type}</td>
-                    <td><img src="${eventObject.imageUrl}" alt="Event Image" style="width:100px; height:auto;"></td>
-                    <td>${reversedDate}</td>
-                    <td><button class="delete-button" data-index="${index}">Delete</button></td>
-                </tr>
-            `;
+                    <tr>
+                        <td>${eventObject.name}</td>
+                        <td>${eventObject.minPrice}</td>
+                        <td>${eventObject.maxPrice}</td>
+                        <td>${eventObject.type}</td>
+                        <td><img class="event-image" src="${eventObject.imageUrl}" alt="Event Image"></td>
+                        <td>${reversedDate}</td>
+                        <td><button class="btn btn-danger delete-button" data-index="${index}">Delete</button></td>
+                    </tr>
+                `;
   });
 
-  tableHTML += `</table>`;
+  tableHTML += `</tbody></table></div>`;
   document.getElementById("eventTable").innerHTML = tableHTML;
 
   // Add event listeners to the delete buttons
