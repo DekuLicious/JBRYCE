@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="eventContainer"></div>
+    <div id="eventContainer">
+      <form id="eventForm">
+        <h1>Event Info</h1>
+        <input type="text" id="eventName" placeholder="Event Name" required />
+        <input type="number" id="minPrice" placeholder="Minimum Price" required />
+        <input type="number" id="maxPrice" placeholder="Maximum Price" required />
+        <select id="eventType" required>
+          <option value="">--Please choose an option--</option>
+          <option value="Wedding">Wedding</option>
+          <option value="Bar Mitzvah">Bar Mitzvah</option>
+          <option value="Anniversary">Anniversary</option>
+          <option value="Birthday">Birthday</option>
+        </select>
+        <input type="text" placeholder="Image URL" id="imageUrl" required />
+        <input type="date" id="eventDate" required />
+        <div class="button-container">
+          <input type="submit" value="Add Event" />
+          <input type="reset" value="Reset Form" />
+          <button id="clearEvents" type="button">Clear Events</button>
+        </div>
+      </form>
+      <div id="eventTable"></div>
+    </div>
   </body>
 </html>
