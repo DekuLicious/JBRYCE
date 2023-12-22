@@ -85,13 +85,13 @@ const createTable = () => {
                 <table class="table table-striped text-center">
                     <thead>
                         <tr>
-                            <th>Event Name</th>
-                            <th>Minimum Price</th>
-                            <th>Maximum Price</th>
-                            <th>Type</th>
-                            <th>Image</th>
-                            <th>Date</th>
-                            <th>Action</th>
+                            <th class="table-header">Event Name</th>
+                            <th class="table-header">Minimum Price</th>
+                            <th class="table-header">Maximum Price</th>
+                            <th class="table-header">Type</th>
+                            <th class="table-header">Image</th>
+                            <th class="table-header">Date</th>
+                            <th class="table-header">Action</th>
                         </tr>
                     </thead>
                     <tbody>
