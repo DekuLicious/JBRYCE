@@ -82,16 +82,16 @@ const createTable = () => {
   var tableHTML = `
             <h1 class="h3 mb-3 fw-normal text-center">Events</h1>
             <div class="table-responsive">
-                <table class="table table-striped text-center">
+                <table class="table table-striped text-center align-middle">
                     <thead>
                         <tr>
-                            <th class="table-header">Event Name</th>
-                            <th class="table-header">Minimum Price</th>
-                            <th class="table-header">Maximum Price</th>
-                            <th class="table-header">Type</th>
-                            <th class="table-header">Image</th>
-                            <th class="table-header">Date</th>
-                            <th class="table-header">Action</th>
+                            <th class="text-light bg-dark">Event Name</th>
+                            <th class="text-light bg-dark">Minimum Price</th>
+                            <th class="text-light bg-dark">Maximum Price</th>
+                            <th class="text-light bg-dark">Type</th>
+                            <th class="text-light bg-dark">Image</th>
+                            <th class="text-light bg-dark">Date</th>
+                            <th class="text-light bg-dark">Action</th>
                         </tr>
                     </thead>
                     <tbody>
