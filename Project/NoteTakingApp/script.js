@@ -24,6 +24,20 @@ document.getElementById("addNote").addEventListener("click", function () {
   document.getElementById("notesContainer").appendChild(note);
   noteInput.value = "";
 
+  // Add double click event listener for editing
+  noteText.addEventListener("dblclick", function () {
+    var input = document.createElement("input");
+    input.value = noteText.textContent;
+    input.style.width = "400px";
+    note.replaceChild(input, noteText);
+
+    input.addEventListener("blur", function () {
+      noteText.textContent = input.value;
+      note.replaceChild(noteText, input);
+      saveNotes();
+    });
+  });
+
   saveNotes();
 });
 

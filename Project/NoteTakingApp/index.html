@@ -9,8 +9,11 @@
   </head>
   <body>
     <div id="app">
-      <h3>My Notes</h3>
-      <textarea id="noteInput" maxlength="50"></textarea>
+      <div id="titleAndHint">
+        <h3>My Notes</h3>
+        <p id="notesHint">Double-click on a note to edit it</p>
+      </div>
+      <textarea id="noteInput" maxlength="90"></textarea>
       <button id="addNote">Add Note</button>
       <div id="notesContainer"></div>
     </div>
