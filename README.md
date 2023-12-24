@@ -8,7 +8,9 @@ This repository contains my coursework for a Full-Stack Developer course. The pr
 
 2. **JavaScript Exercises**: A collection of exercises that demonstrate my understanding of JavaScript concepts such as arrays, classes, loops, conditionals, objects, and prototypes. [Link to exercises](JS/)
 
-3. **Car System Project**: A project that simulates a car system, demonstrating my ability to create interactive web applications. [Link to project](Project/carSystem/index.html)
+3. **Vehicle Management System**: A project that simulates a vehicle management system, demonstrating my ability to create interactive web applications. [Link to project](Project/vehicleManagementSystem/index.html)
+
+4. **Note App**: A simple note-taking application that allows users to create, read, update, and delete notes. [Link to project](Project/noteApp/index.html)
 
 ## Technologies Used
 
