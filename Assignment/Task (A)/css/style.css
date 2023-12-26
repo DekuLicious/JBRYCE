@@ -51,7 +51,7 @@ form input[type="submit"] {
   cursor: pointer;
   margin-top: 10px;
   padding: 10px;
-  width: 100%;
+  width: 150px;
 }
 
 form input[type="submit"]:hover {
@@ -67,6 +67,7 @@ table {
   border-collapse: collapse;
   margin-top: 20px;
   width: 100%;
+  table-layout: fixed;
 }
 
 table,

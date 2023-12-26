@@ -11,7 +11,7 @@ function addProduct(submitEvent) {
   const category = document.getElementById("categorySelect").value;
   const image = document.getElementById("imageInput").value;
 
-  // Check if any of the inputs are empty (HTML has required attribute but this is a backup in case)
+  // Check if any of the inputs are empty (HTML has required attribute but this is a backup)
   if (!product || !price || !category || !image) {
     alert("Please fill all the fields");
     return;
@@ -67,7 +67,6 @@ function renderProductList() {
   addDeleteEventListeners();
 }
 
-// Function to create a table for the products
 // Function to create a table for the products
 function createTable() {
   let table = `
