@@ -34,6 +34,7 @@ form {
 
 form input[type="text"],
 form input[type="number"],
+form input[type="url"],
 form select {
   border: 1px solid #ddd;
   border-radius: 5px;
