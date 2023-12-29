@@ -3,28 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task Organizer</title>
+    <title>Task Scheduler</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js" defer></script>
   </head>
   <body>
-    <h1>My Assignment Board</h1>
-    <div class="main-container">
-      <form id="assignment-form">
-        <div class="field-container">
-          <div>
-            <input type="text" id="assignment-details" placeholder="Assignment Details" required />
-            <input type="date" id="due-date" placeholder="Date Due" required />
-            <input type="time" id="due-time" placeholder="Time Due" required />
-          </div>
+    <div class="container">
+      <h1 class="my-3">My Task Board</h1>
+      <form id="taskForm">
+        <div class="input-wrapper">
+          <input type="text" class="form-control" id="note" name="note" placeholder="Task" required />
+          <input type="date" class="form-control" id="dueDate" name="dueDate" placeholder="Due Date" required />
+          <input type="time" class="form-control" id="dueTime" name="dueTime" placeholder="Due Time" required />
         </div>
-        <div class="action-container">
-          <button type="submit">Add Assignment</button>
-          <button type="reset">Clear Form</button>
+        <div class="button-wrapper">
+          <button type="submit" class="btn btn-primary btn-custom">Add Task</button>
+          <button type="reset" class="btn btn-danger btn-custom">Reset</button>
         </div>
       </form>
-      <div id="assignment-container"></div>
+    </div>
+    <div class="container">
+      <div id="taskBoard" class="row"></div>
     </div>
   </body>
 </html>
