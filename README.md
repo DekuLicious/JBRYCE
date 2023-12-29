@@ -1,16 +1,26 @@
 # JBRYCE Full-Stack Developer Coursework
 
-This repository contains my coursework for a Full-Stack Developer course. The projects and exercises included here represent my progress and learnings as I delve into the world of full-stack development.
+Welcome to my Full-Stack Developer coursework repository. This repository showcases my progress and learnings in the world of full-stack development. It includes a variety of projects and exercises that demonstrate my understanding and application of various technologies.
 
-## Projects
+## Main Projects
 
-1. **Bootstrap Resume**: A responsive resume built using Bootstrap. It showcases my skills, education, and experience in a clean and professional layout. [Link to project](Bootstrap/Resume/index.html)
+These projects represent the core of my coursework and demonstrate a wide range of skills.
+
+1. **Assignment Projects**: These are comprehensive projects that cover multiple aspects of full-stack development. They include various tasks that demonstrate my ability to build complete applications. [Link to projects](Assignment/)
+
+2. **Course Projects**: These projects are part of the course curriculum and demonstrate my understanding of specific concepts and technologies. [Link to projects](Project/)
+
+## Additional Work
+
+In addition to the main projects, I have also worked on various smaller exercises and experiments. These include:
+
+1. **Bootstrap Exercises**: A collection of exercises demonstrating my ability to create responsive designs using Bootstrap. [Link to exercises](Bootstrap/)
 
 2. **JavaScript Exercises**: A collection of exercises that demonstrate my understanding of JavaScript concepts such as arrays, classes, loops, conditionals, objects, and prototypes. [Link to exercises](JS/)
 
-3. **Vehicle Management System**: A project that simulates a vehicle management system, demonstrating my ability to create interactive web applications. [Link to project](Project/vehicleManagementSystem/index.html)
+3. **CSS Exercises**: These exercises showcase my skills in creating visually appealing designs using CSS. [Link to exercises](CSS/)
 
-4. **Note App**: A simple note-taking application that allows users to create, read, update, and delete notes. [Link to project](Project/noteApp/index.html)
+4. **HTML Exercises**: These exercises demonstrate my understanding of HTML and my ability to create structured and semantic web pages. [Link to exercises](HTML/)
 
 ## Technologies Used
 
