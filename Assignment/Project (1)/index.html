@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Organizer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <h1>My Assignment Board</h1>
+    <div class="main-container">
+      <form id="assignment-form">
+        <div class="field-container">
+          <div>
+            <input type="text" id="assignment-details" placeholder="Assignment Details" required />
+            <input type="date" id="due-date" placeholder="Date Due" required />
+            <input type="time" id="due-time" placeholder="Time Due" required />
+          </div>
+        </div>
+        <div class="action-container">
+          <button type="submit">Add Assignment</button>
+          <button type="reset">Clear Form</button>
+        </div>
+      </form>
+      <div id="assignment-container"></div>
+    </div>
+  </body>
+</html>
