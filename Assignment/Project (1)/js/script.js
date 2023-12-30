@@ -41,7 +41,14 @@ class TaskManager {
     newTask.querySelector(".btn-close").addEventListener("click", () => {
       const id = newTask.dataset.id;
       this.tasks = this.tasks.filter((task) => task.id != id);
-      localStorage.setItem("tasks", JSON.stringify(this.tasks));
+
+      // If there are no tasks left, remove the tasks key from local storage
+      if (this.tasks.length === 0) {
+        localStorage.removeItem("tasks");
+      } else {
+        localStorage.setItem("tasks", JSON.stringify(this.tasks));
+      }
+
       newTask.remove();
     });
   }
@@ -58,9 +65,14 @@ class TaskManager {
       // Filter out tasks that are due in the past
       this.tasks = this.tasks.filter((task) => new Date(`${task.dueDate} ${task.dueTime}`) > now);
 
-      this.updateTaskId();
+      // If there are no tasks left, remove the tasks key from local storage
+      if (this.tasks.length === 0) {
+        localStorage.removeItem("tasks");
+      } else {
+        localStorage.setItem("tasks", JSON.stringify(this.tasks));
+      }
 
-      localStorage.setItem("tasks", JSON.stringify(this.tasks));
+      this.updateTaskId();
 
       // Create tasks for each stored task
       this.tasks.forEach((task) => this.createTask(task.id, task.note, task.dueDate, task.dueTime));
