@@ -116,3 +116,19 @@ form {
   opacity: 0;
   transition: opacity 0.5s;
 }
+
+@media (max-width: 768px) {
+  form {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  #note,
+  #dueDate,
+  #dueTime {
+    font-size: 1em;
+  }
+}
